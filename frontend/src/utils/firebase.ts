@@ -17,8 +17,8 @@ import {
   addDoc,
 } from "firebase/firestore";
 
-const firebaseConfig = {
-};
+// INSERT CONFIG HERE
+const firebaseConfig = {};
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -79,9 +79,11 @@ const sendPasswordReset = async (email) => {
     alert(err.message);
   }
 };
+
 const logout = () => {
   signOut(auth);
 };
+
 export {
   auth,
   db,
